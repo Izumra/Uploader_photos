@@ -1,13 +1,9 @@
-import express from 'express'
-import dotenv from 'dotenv'
-import {connect} from './public/backend/connector.js'
+import express from "express"
+import allRoutes from "./routes/index.js"
+import dotenv from "dotenv"
 
 const app=express()
-app.use(express.static('public'))
 dotenv.config()
-
-app.get('/',(req,res)=>{
-    connect()
-    res.send("server photos")
-})
-app.listen(3000)
+app.use(express.static('public'))
+allRoutes(app)
+app.listen(1000)
