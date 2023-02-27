@@ -1,0 +1,21 @@
+
+
+<%-include('./SupModules/Start.ejs')%>
+
+<div class="putPhoto">
+    <form action="post" enctype="multipart/form-data">
+        <input type="text" name="titleImg" placeholder="Название загружаемой фотографии">
+        <input type="file" name="avatar" accept="image/jpeg,image/png"/>
+        <input type="submit" value="Отправить фотографию">
+    </form>
+</div>
+
+<div class="putPhoto">
+    <form action="post" enctype="multipart/form-data">
+        <input type="text" name="titleImg" placeholder="Название запрашиваемой фотографии">
+        <input type="file" name="avatar" accept="image/jpeg,image/png"/>
+        <input type="submit" value="Получить фотографию">
+    </form>
+</div>
+
+<%-include('./SupModules/End.ejs')%>

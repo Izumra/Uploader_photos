@@ -4,8 +4,7 @@ const router=express.Router()
 
 router.get('/',async(req,res)=>{
     const data=await db('select * from schema1.participant')
-    console.log(data)
-    res.send("home page")
+    res.render('HomePage')
 })
 
 export default router
